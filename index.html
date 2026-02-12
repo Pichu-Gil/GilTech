@@ -45,6 +45,16 @@
 </head>
 <body class="bg-gray-900 text-white font-sans h-screen flex flex-col overflow-hidden">
 
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-gray-900 border-b border-gray-700 shadow-2xl z-50">
+        <div class="flex flex-col p-4 space-y-2">
+            <button onclick="switchTab('inicio'); toggleMobileMenu()" class="text-left px-4 py-4 text-gray-300 hover:bg-gray-800 rounded-lg text-lg border-b border-gray-800">Inicio</button>
+            <button onclick="switchTab('nosotros'); toggleMobileMenu()" class="text-left px-4 py-4 text-gray-300 hover:bg-gray-800 rounded-lg text-lg border-b border-gray-800">Nosotros</button>
+            <button onclick="switchTab('sistema'); toggleMobileMenu()" class="text-left px-4 py-4 text-gray-300 hover:bg-gray-800 rounded-lg text-lg border-b border-gray-800">Sistema Lealtad</button>
+            <button onclick="switchTab('servicios'); toggleMobileMenu()" class="text-left px-4 py-4 text-gray-300 hover:bg-gray-800 rounded-lg text-lg border-b border-gray-800">Servicios TI</button>
+            <button onclick="switchTab('contacto'); toggleMobileMenu()" class="text-left px-4 py-4 text-blue-400 font-bold bg-blue-900/20 rounded-lg text-lg mt-2">Contacto</button>
+        </div>
+    </div>
+
     <nav class="w-full bg-gray-800 shadow-xl border-b border-gray-700 z-50 flex-none">
         <div class="container mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-20">
@@ -573,3 +583,4 @@ function toggleMobileMenu() {
     </script>
 </body>
 </html>
+
