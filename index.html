@@ -45,7 +45,7 @@
 </head>
 <body class="bg-gray-900 text-white font-sans h-screen flex flex-col overflow-hidden">
 
-  <nav class="w-full bg-gray-800 shadow-xl border-b border-gray-700 z-50 flex-none relative">
+    <nav class="w-full bg-gray-800 shadow-xl border-b border-gray-700 z-50 flex-none relative">
         <div class="container mx-auto px-4"> <div class="flex flex-row justify-between items-center h-20 w-full"> 
                 <h1 class="text-xl md:text-2xl font-bold tracking-tighter text-blue-400 flex items-center gap-2 cursor-pointer truncate" onclick="switchTab('inicio')">
                     <i class="fas fa-code"></i> 
@@ -59,11 +59,13 @@
                     <button onclick="switchTab('nosotros')" id="btn-nosotros" class="nav-btn px-4 py-4 h-full text-gray-300 hover:text-white hover:bg-gray-700 transition font-medium text-sm uppercase tracking-wide">Nosotros</button>
                     <button onclick="switchTab('contacto')" id="btn-contacto" class="nav-btn bg-blue-600 px-4 py-4 h-full text-white hover:text-white hover:bg-blue-500 transition font-medium text-sm uppercase tracking-wide">Contacto</button>
                 </div>
-                    <div class="md:hidden">
+
+                <div class="md:hidden">
                     <button onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white focus:outline-none p-2 border border-gray-600 rounded bg-gray-900">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
+
             </div>
         </div>
 
@@ -77,6 +79,8 @@
             </div>
         </div>
     </nav>
+
+
 
     <main class="flex-grow overflow-y-auto relative bg-gray-900 scroll-smooth" id="main-content">
         
@@ -222,6 +226,10 @@
                                     <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm">Login con Google.</span></li>
                                     <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm">Gamificación y metas.</span></li>
                                     <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm">Escáner Integrado.</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm"></i>Acceso PWA sin descarga de tiendas.</li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm"</i>Instalación en pantalla principal.</li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm"</i>Autenticación segura Google Auth.</li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm"</i>Escaneo de QR para sumar puntos.</li>
                                 </ul>
                             </div>
                         </div>
@@ -231,14 +239,112 @@
                                 <span class="bg-red-900/30 text-red-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">App Admin</span>
                                 <h4 class="text-2xl font-bold text-white mb-4">Panel de Control</h4>
                                 <ul class="space-y-4">
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-red-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm">Suma Punto de Venta ( SUMA POS).</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-red-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm">Suma Punto de Venta (SUMA POS).</span></li>
                                     <li class="flex items-start"><i class="fas fa-check-circle text-red-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm">Validación de Seguridad.</span></li>
                                     <li class="flex items-start"><i class="fas fa-check-circle text-red-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm">Auditoría completa.</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-red-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm"></i>Asignación rápida de puntos.</li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-red-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm"></i>Generación de QRs antifraude.</li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-red-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm"></i>Validación de canjes en tiempo real.</li>
+                                    <li class="flex items-start"><i class="fas fa-check-circle text-red-500 mt-1 mr-3"></i><span class="text-gray-400 text-sm"></i>Actualización automática de historial.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="mt-20 pt-16 border-t border-gray-800">
+                    
+                    <div class="text-center mb-16">
+                        <span class="bg-purple-900/30 text-purple-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">
+                            Documentación Técnica
+                        </span>
+                        <h3 class="text-3xl font-bold text-white mb-4">Guía Operativa de <span class="text-purple-500">Implementación</span></h3>
+                        <p class="text-gray-400 max-w-2xl mx-auto text-sm">Sistema de Lealtad - Documento de Capacitación y Despliegue Visual (Feb 2026)</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-purple-500 transition duration-300">
+                            <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-purple-500"></span> Introducción</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Sistema de Lealtad es una solución de fidelización digital en modalidad <strong>white-label</strong>, diseñada para transformar la relación entre negocios y clientes mediante una experiencia moderna, ágil y completamente personalizable.
+                            </p>
+                        </div>
+                        <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-purple-500 transition duration-300">
+                            <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2"><span class="text-purple-500"></span> Especificaciones Marca Blanca</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Sistema completamente configurable en colores, catálogo de premios, identidad visual, logotipos, splash screen y manifiesto personalizado para tu marca.
+                            </p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mb-16 overflow-hidden rounded-2xl border border-gray-700 bg-gray-800">
+                        <div class="p-4 bg-gray-900 border-b border-gray-700">
+                            <h4 class="text-lg font-bold text-white"><i class="fas fa-table mr-2 text-purple-500"></i> Tabla Operativa GilTech</h4>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-gray-800 text-gray-400 text-xs uppercase tracking-wider">
+                                        <th class="p-4 font-bold border-b border-gray-700">Función</th>
+                                        <th class="p-4 font-bold border-b border-gray-700">Responsable</th>
+                                        <th class="p-4 font-bold border-b border-gray-700">Acción del Sistema</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-sm text-gray-300 divide-y divide-gray-700">
+                                    <tr class="hover:bg-gray-700/50 transition">
+                                        <td class="p-4 font-medium text-white">Sumar Puntos</td>
+                                        <td class="p-4"><span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded text-xs font-bold">Cliente</span></td>
+                                        <td class="p-4">Escanea QR y acredita puntos.</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-700/50 transition">
+                                        <td class="p-4 font-medium text-white">Generar QR Venta</td>
+                                        <td class="p-4"><span class="bg-red-900/40 text-red-300 px-2 py-1 rounded text-xs font-bold">Admin</span></td>
+                                        <td class="p-4">Crea código temporal con puntos asignados.</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-700/50 transition">
+                                        <td class="p-4 font-medium text-white">Consultar Historial</td>
+                                        <td class="p-4 text-xs">Cliente / Admin</td>
+                                        <td class="p-4">Muestra registro detallado de transacciones.</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-700/50 transition">
+                                        <td class="p-4 font-medium text-white">Validar Canje</td>
+                                        <td class="p-4"><span class="bg-red-900/40 text-red-300 px-2 py-1 rounded text-xs font-bold">Admin</span></td>
+                                        <td class="p-4">Descuenta puntos y confirma entrega.</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-700/50 transition">
+                                        <td class="p-4 font-medium text-white">Instalar App</td>
+                                        <td class="p-4 text-xs">Todos</td>
+                                        <td class="p-4">Registra la PWA en el dispositivo.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700">
+                        <h4 class="text-xl font-bold text-white mb-6">Ventajas Estratégicas</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-8">
+                            <div class="flex items-center gap-3 text-sm text-gray-300">
+                                <div class="w-2 h-2 rounded-full bg-green-500"></div> No depende de tiendas de apps
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-300">
+                                <div class="w-2 h-2 rounded-full bg-green-500"></div> Implementación rápida
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-300">
+                                <div class="w-2 h-2 rounded-full bg-green-500"></div> Bajo costo de mantenimiento
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-300">
+                                <div class="w-2 h-2 rounded-full bg-green-500"></div> Sistema antifraude QR dinámico
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-300">
+                                <div class="w-2 h-2 rounded-full bg-green-500"></div> Escalable a Franquicias
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
 
                 <div class="mt-20 pt-16 border-t border-gray-800">
                     
@@ -286,10 +392,10 @@
                             </a>
                         </div>
 
-                      <div class="bg-gray-800 rounded-2xl p-8 border-2 border-yellow-500 shadow-2xl shadow-yellow-900/20 relative transform md:-translate-y-4 mt-16 md:mt-0 z-10">
+                        <div class="bg-gray-800 rounded-2xl p-8 border-2 border-yellow-500 shadow-2xl shadow-yellow-900/20 relative transform md:-translate-y-4 mt-16 md:mt-0 z-10">
                             <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                 <span class="bg-yellow-500 text-black font-bold px-4 py-1 rounded-full text-sm shadow-lg">
-                                    ⭐ RECOMENDADO
+                                    ⭐ RECOMENDADO ⭐
                                 </span>
                             </div>
 
@@ -520,16 +626,69 @@
 
             </div>
         </div>
-       <footer class="py-8 px-4 text-center border-t border-gray-800 mt-auto bg-gray-900">
+
+        <div id="privacidad" class="tab-content">
+            <div class="container mx-auto px-6 py-12 max-w-4xl">
+                <div class="bg-gray-800 p-8 md:p-12 rounded-3xl border border-gray-700 shadow-2xl">
+                    <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-4">Aviso de Privacidad Integral</h2>
+                    
+                    <div class="text-gray-300 space-y-6 text-sm leading-relaxed text-justify h-[60vh] overflow-y-auto pr-4 custom-scrollbar">
+                        <p>
+                            <strong>GilTech Solutions</strong>, con domicilio en Hermosillo, Sonora, México, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:
+                        </p>
+
+                        <h4 class="text-blue-400 font-bold text-lg mt-4">¿Para qué fines utilizaremos sus datos personales?</h4>
+                        <p>
+                            Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son necesarias para el servicio que solicita:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>Creación y administración de su cuenta en nuestra plataforma.</li>
+                                <li>Procesamiento de pagos y facturación de servicios.</li>
+                                <li>Proveer los servicios y productos requeridos (Sistema de Lealtad).</li>
+                                <li>Informar sobre cambios o nuevos productos o servicios.</li>
+                            </ul>
+                        </p>
+
+                        <h4 class="text-blue-400 font-bold text-lg mt-4">¿Qué datos personales utilizaremos?</h4>
+                        <p>
+                            Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales: Nombre completo, Teléfono, Correo electrónico, Datos de facturación y Nombre comercial del negocio.
+                        </p>
+
+                        <h4 class="text-blue-400 font-bold text-lg mt-4">Derechos ARCO</h4>
+                        <p>
+                            Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición).
+                        </p>
+
+                        <h4 class="text-blue-400 font-bold text-lg mt-4">Contacto</h4>
+                        <p>
+                            Para el ejercicio de cualquiera de los derechos ARCO, usted deberá presentar la solicitud respectiva a través del siguiente medio: Correo electrónico <strong>contacto@giltech.com</strong>.
+                        </p>
+                        
+                        <p class="text-xs text-gray-500 mt-8 pt-4 border-t border-gray-600">
+                            Última actualización: Febrero 2026.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <button onclick="switchTab('inicio')" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-lg font-bold transition">
+                            Volver al Inicio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <footer class="py-8 px-4 text-center border-t border-gray-800 mt-auto bg-gray-900">
         
             <p class="text-gray-500 text-sm leading-relaxed">
                 &copy; 2026 <span class="text-gray-400 font-bold">GILTECH SOLUTIONS</span>
                 <span class="block md:inline mt-2 md:mt-0"> - Desarrollado en Sonora, México.</span>
             </p>
     
-            <a href="#" class="inline-block mt-4 text-gray-400 hover:text-white text-xs font-medium underline decoration-gray-600 underline-offset-4 transition duration-300">
+            <button onclick="switchTab('privacidad')" class="inline-block mt-4 text-gray-400 hover:text-white text-xs font-medium underline decoration-gray-600 underline-offset-4 transition duration-300 bg-transparent border-0 cursor-pointer">
                 Aviso de privacidad
-            </a>
+            </button>
     
         </footer>
 
@@ -591,13 +750,3 @@ function toggleMobileMenu() {
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
